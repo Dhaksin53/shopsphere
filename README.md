@@ -2,8 +2,8 @@
 
 A full-stack e-commerce platform built to learn the **entire** modern full-stack and Azure cloud skill set in depth — from a simple monolith to a secure, observable, multi-region distributed system.
 
-> This is a learning project. Every phase follows the same loop:
-> **learn the theory → build the naive version → break it on purpose → fix it properly and measure → write a design note.**
+> This is a learning project built sprint by sprint. Learning happens while building: each sprint lists the concepts it uses as a self-check, with a deep-dive resource for anything I'm unsure of.
+> **Self-check → build → break it on purpose → fix it properly and measure → write a design note.**
 
 ## Tech stack
 
@@ -22,17 +22,16 @@ A full-stack e-commerce platform built to learn the **entire** modern full-stack
 
 ## Progress
 
-| Stage | Focus | Status |
-|---|---|---|
-| Stage 0 | Prerequisites | ⬜ Not started |
-| Phase 1 | Monolith MVP | ⬜ Not started |
-| Phase 2 | Correctness: money and concurrency | ⬜ Not started |
-| Phase 3 | Performance: caching, NoSQL, CDN | ⬜ Not started |
-| Phase 4 | Reliability: async and event-driven | ⬜ Not started |
-| Phase 5 | Microservices and containers | ⬜ Not started |
-| Phase 6 | Scale: flash sale | ⬜ Not started |
-| Phase 7 | Intelligence: search, recommendations, AI | ⬜ Not started |
-| Phase 8 | Production-grade | ⬜ Not started |
+| Phase | Focus | Sprints | Status |
+|---|---|---|---|
+| Phase 1 | Monolith MVP | 1.0–1.7 | 🟨 Next: Sprint 1.0 |
+| Phase 2 | Correctness: money and concurrency | 2.1–2.5 | ⬜ Not started |
+| Phase 3 | Performance: caching, NoSQL, CDN | 3.1–3.5 | ⬜ Not started |
+| Phase 4 | Reliability: async and event-driven | 4.1–4.4 | ⬜ Not started |
+| Phase 5 | Microservices and containers | 5.1–5.8 | ⬜ Not started |
+| Phase 6 | Scale: flash sale | 6.1–6.5 | ⬜ Not started |
+| Phase 7 | Intelligence: search, recommendations, AI | 7.1–7.4 | ⬜ Not started |
+| Phase 8 | Production-grade | 8.1–8.9 | ⬜ Not started |
 
 Status key: ⬜ Not started · 🟨 In progress · ✅ Done
 
@@ -46,7 +45,7 @@ shopsphere/
 └── README.md
 ```
 
-Application code (`frontend/`, `backend/`, `postman/`, `infra/`) is added from Phase 1 onward.
+From Sprint 1.0 this becomes an npm-workspaces monorepo: `apps/api` (NestJS), `apps/web` (React), `postman/`, and later `services/` and `infra/`.
 
 ## Docs
 
