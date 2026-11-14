@@ -23,6 +23,10 @@
 - Use free tiers wherever possible (Azure SQL free offer, Cosmos DB free tier, Functions consumption plan).
 - Delete expensive resources after each practice session (AKS, API Management, Data Explorer, Front Door Premium).
 
+## Architecture
+
+The target architecture, phase-by-phase diagrams and the reason behind every technology are in [`ARCHITECTURE.md`](ARCHITECTURE.md). Each decision has an ADR in [`adr/`](adr/).
+
 ## Already done
 
 - [x] Internet fundamentals: IP, TCP/UDP, DNS, HTTP, cookies, caching headers, TLS, OS basics
@@ -37,13 +41,13 @@
 
 **Build**
 
-- [ ] Turn on branch protection for `main` (PR required)
-- [ ] Install Node LTS with **fnm** or **nvm-windows**; add `.nvmrc`
-- [ ] Monorepo with **npm workspaces**: `apps/api`, `apps/web`, `postman/`
-- [ ] Shared strict `tsconfig`, **ESLint + Prettier**
-- [ ] **Husky + commitlint** to enforce conventional commits
-- [ ] PR template (`.github/pull_request_template.md`)
-- [ ] GitHub Actions CI: install → lint → typecheck on every PR
+- [x] Turn on branch protection for `main` (PR required); CI jobs are required checks
+- [x] Install Node LTS with **fnm** or **nvm-windows**; add `.nvmrc` (Node 24 pinned; fnm optional)
+- [x] Monorepo with **npm workspaces**: `apps/api`, `apps/web`, `postman/` (workspaces configured; apps arrive with the walking skeleton)
+- [x] Shared strict `tsconfig`, **ESLint + Prettier**
+- [x] **Husky + commitlint** to enforce conventional commits
+- [x] PR template (`.github/pull_request_template.md`)
+- [x] GitHub Actions CI: install → lint → typecheck on every PR (+ format check and PR-title check)
 
 **Self-check**
 
@@ -787,7 +791,7 @@
 
 ## Sprint 8.1: Infrastructure as code
 
-- [ ] Every resource in **Terraform** (or Bicep): modules, remote state, dev/staging/prod
+- [ ] Every resource in **Terraform** ([ADR-0013](adr/0013-terraform-for-iac.md)): modules, remote state, dev/staging/prod
 - [ ] Delete the environment and recreate it with one command
 
 ## Sprint 8.2: Full CI/CD
