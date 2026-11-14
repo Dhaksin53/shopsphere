@@ -17,21 +17,21 @@ A full-stack e-commerce platform built to learn the **entire** modern full-stack
 | Messaging              | Service Bus, Event Grid, Event Hubs                                              |
 | Compute                | App Service, Azure Functions, Container Apps, AKS                                |
 | API testing            | Postman + Newman                                                                 |
-| Infrastructure as code | Terraform or Bicep                                                               |
+| Infrastructure as code | Terraform ([ADR-0013](docs/adr/0013-terraform-for-iac.md))                       |
 | CI/CD                  | GitHub Actions                                                                   |
 
 ## Progress
 
-| Phase   | Focus                                     | Sprints | Status              |
-| ------- | ----------------------------------------- | ------- | ------------------- |
-| Phase 1 | Monolith MVP                              | 1.0–1.7 | 🟨 Next: Sprint 1.0 |
-| Phase 2 | Correctness: money and concurrency        | 2.1–2.5 | ⬜ Not started      |
-| Phase 3 | Performance: caching, NoSQL, CDN          | 3.1–3.5 | ⬜ Not started      |
-| Phase 4 | Reliability: async and event-driven       | 4.1–4.4 | ⬜ Not started      |
-| Phase 5 | Microservices and containers              | 5.1–5.8 | ⬜ Not started      |
-| Phase 6 | Scale: flash sale                         | 6.1–6.5 | ⬜ Not started      |
-| Phase 7 | Intelligence: search, recommendations, AI | 7.1–7.4 | ⬜ Not started      |
-| Phase 8 | Production-grade                          | 8.1–8.9 | ⬜ Not started      |
+| Phase   | Focus                                     | Sprints | Status                                         |
+| ------- | ----------------------------------------- | ------- | ---------------------------------------------- |
+| Phase 1 | Monolith MVP                              | 1.0–1.7 | 🟨 1.0 done · next: walking skeleton, then 1.1 |
+| Phase 2 | Correctness: money and concurrency        | 2.1–2.5 | ⬜ Not started                                 |
+| Phase 3 | Performance: caching, NoSQL, CDN          | 3.1–3.5 | ⬜ Not started                                 |
+| Phase 4 | Reliability: async and event-driven       | 4.1–4.4 | ⬜ Not started                                 |
+| Phase 5 | Microservices and containers              | 5.1–5.8 | ⬜ Not started                                 |
+| Phase 6 | Scale: flash sale                         | 6.1–6.5 | ⬜ Not started                                 |
+| Phase 7 | Intelligence: search, recommendations, AI | 7.1–7.4 | ⬜ Not started                                 |
+| Phase 8 | Production-grade                          | 8.1–8.9 | ⬜ Not started                                 |
 
 Status key: ⬜ Not started · 🟨 In progress · ✅ Done
 
@@ -49,5 +49,7 @@ From Sprint 1.0 this becomes an npm-workspaces monorepo: `apps/api` (NestJS), `a
 
 ## Docs
 
+- [Architecture: diagrams and technology choices](docs/ARCHITECTURE.md)
+- [Architecture decision records](docs/adr/)
 - [Full roadmap](docs/ROADMAP.md)
 - [Design note template](docs/design-notes/TEMPLATE.md)
